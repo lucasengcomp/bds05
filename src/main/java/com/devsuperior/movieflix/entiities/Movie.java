@@ -1,13 +1,19 @@
 package com.devsuperior.movieflix.entiities;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+
+@Entity
+@Table(name = "tb_movie")
 public class Movie implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
     private String subTitle;
@@ -15,8 +21,11 @@ public class Movie implements Serializable {
     private String imgUrl;
     private String synopsis;
 
+    @ManyToOne
+    @JoinColumn(name = "genre_id")
     private Genre genre;
 
+    @OneToMany(mappedBy = "movie")
     private List<Review> reviews = new ArrayList<>();
 
     public Movie() {

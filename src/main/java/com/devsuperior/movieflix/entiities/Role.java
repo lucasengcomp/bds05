@@ -1,20 +1,30 @@
 package com.devsuperior.movieflix.entiities;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
+@Table(name = "tb_role")
 public class Role implements Serializable {
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String authority;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public Role() {
     }
 
-    public Role(Long id, String authority) {
+    public Role(Long id, String authority, User user) {
         this.id = id;
         this.authority = authority;
+        this.user = user;
     }
 
     public Long getId() {
@@ -31,6 +41,14 @@ public class Role implements Serializable {
 
     public void setAuthority(String authority) {
         this.authority = authority;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     @Override
