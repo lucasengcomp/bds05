@@ -15,13 +15,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class UserService implements UserDetailsService {
+public class UserServiceImpl implements UserDetailsService, UserServiceIT {
 
-    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     private UserRepository repository;
 
+    @Override
     @Transactional(readOnly = true)
     public UserDTO getProfileAuthenticated() {
         try {
@@ -37,7 +38,7 @@ public class UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = repository.findByEmail(username);
         if (user == null) {
-            logger.error("User not found: " + username);
+            logger.error("User not found" + username);
             throw new UsernameNotFoundException("Email not found");
         }
         logger.info("User found: " + username);
