@@ -7,18 +7,21 @@ INSERT INTO tb_role (authority) VALUES ('ROLE_MEMBER');
 INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
 INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 
-INSERT INTO tb_genre (name) VALUES ('Suspense');
-INSERT INTO tb_genre (name) VALUES ('Real');
-INSERT INTO tb_genre (name) VALUES ('Ficção');
+INSERT INTO tb_genre (name) VALUES ('Aventura');
 INSERT INTO tb_genre (name) VALUES ('Drama');
+INSERT INTO tb_genre (name) VALUES ('Animação');
+INSERT INTO tb_genre (name) VALUES ('Ficção Científica');
+INSERT INTO tb_genre (name) VALUES ('Fantasia');
 
-INSERT INTO tb_movie (title, sub_title, year, img_url, synopsis, genre_id) VALUES ('o curioso caso de Benjamin Button', 'Benjamin Button é um homem que nasce idoso e rejuvenesce à medida que o tempo passa. Doze anos depois de seu nascimento, ele conhece Daisy, uma criança que entra e sai de sua vida enquanto cresce para ser dançarina. Embora tenha todos os tipos de aventuras incomuns, sua relação com Daisy o faz acreditar que os dois se encontrarão no momento certo da vida.', 2009, 'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/1-big.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 1);
-INSERT INTO tb_movie (title, sub_title, year, img_url, synopsis, genre_id) VALUES ('Mãos Talentosas: A História de Ben Carson', 'A história de Ben Carson, menino pobre de Detroit, que tirava notas ruins na escola, e se tornou o diretor do centro de neurologia pediátrica do hospital Johns Hopkins.', 2009, 'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/1-big.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 2);
-INSERT INTO tb_movie (title, sub_title, year, img_url, synopsis, genre_id) VALUES ('Matrix', 'O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a desconfiar da realidade. Thomas conhece os misteriosos Morpheus e Trinity e descobre que é vítima de um sistema inteligente e artificial chamado Matrix, que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia', 1999, 'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/1-big.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 3);
-INSERT INTO tb_movie (title, sub_title, year, img_url, synopsis, genre_id) VALUES ('Um Limite Entre Nós', 'Baseado na aclamada e premiada peça teatral homônima, um jogador de beisebol aposentado, que sonhava em se tornar uma grande estrela do esporte durante sua infância, agora trabalha como coletor de lixo para sobreviver. Ele terá de navegar pelas complicadas águas de seu relacionamento com a esposa, o filho e os amigos.', 2016, 'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/1-big.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', 4);
+INSERT INTO tb_movie (title, sub_title, year, img_url, synopsis, genre_id) VALUES ('O Senhor dos Anéis: A Sociedade do Anel', 'A jornada começa', 2001, 'https://example.com/lotr.jpg', 'Frodo Bolseiro embarca em uma perigosa jornada para destruir um poderoso anel e salvar a Terra-média.', 1);
+INSERT INTO tb_movie (title, sub_title, year, img_url, synopsis, genre_id) VALUES ('Interestelar', 'Uma viagem pelo espaço', 2014, 'https://example.com/interstellar.jpg', 'Um grupo de exploradores espaciais embarca em uma missão para encontrar um novo lar para a humanidade em meio a um futuro incerto.', 4);
+INSERT INTO tb_movie (title, sub_title, year, img_url, synopsis, genre_id) VALUES ('Toy Story', 'Uma história de brinquedos', 1995, 'https://example.com/toystory.jpg', 'Os brinquedos de Andy ganham vida quando ele não está por perto, e agora eles precisam se unir para enfrentar novas aventuras e desafios.', 3);
+INSERT INTO tb_movie (title, sub_title, year, img_url, synopsis, genre_id) VALUES ('Blade Runner 2049', '', 2017, 'https://example.com/bladerunner.jpg', 'No ano de 2049, um novo Blade Runner descobre um segredo há muito enterrado que pode mergulhar o que resta da sociedade no caos.', 4);
+INSERT INTO tb_movie (title, sub_title, year, img_url, synopsis, genre_id) VALUES ('Harry Potter e o Prisioneiro de Azkaban', '', 2004, 'https://example.com/harrypotter.jpg', 'Harry Potter retorna a Hogwarts e descobre que um prisioneiro perigoso escapou da prisão de Azkaban e está em busca de vingança.', 5);
 
-INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Filme campeão de bilheteria', 1, 1);
-INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Filme com boa direção', 2, 1);
-INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Filme excelente sobre realidade alteranada', 3, 2);
-INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Filme que relata caso de vida', 4, 2);
-INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Filme excelente', 1, 2);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Esse filme é excelente', 1, 1);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Filme muito emocionante e com belas paisagens espaciais', 2, 1);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Uma animação incrível que encanta pessoas de todas as idades', 3, 2);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Um filme de ficção científica que faz você refletir sobre o futuro da humanidade', 4, 2);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Uma jornada mágica com personagens cativantes', 5, 1);
+INSERT INTO tb_review (text, movie_id, user_id) VALUES ('Esse filme é incrível, a história é envolvente', 1, 2);
