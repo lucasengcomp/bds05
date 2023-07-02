@@ -1,6 +1,6 @@
 package com.devsuperior.movieflix.components;
 
-import com.devsuperior.movieflix.entiities.User;
+import com.devsuperior.movieflix.entities.User;
 import com.devsuperior.movieflix.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
